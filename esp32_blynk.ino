@@ -22,9 +22,9 @@ BlynkTimer timer;
 
 
 
-char auth[] = "quj92szKHA-cgfUlC5pwkaoSAqyo-oZt";       // You should get Auth Token in the Blynk App.
-char ssid[] = "ad";
-char pass[] = "divij@123";
+char auth[] = "";       // You should get Auth Token in the Blynk App.
+char ssid[] = "";
+char pass[] = "";
 
 void sendSensor1()
 {
@@ -46,7 +46,7 @@ void sendSensor1()
 void setup() {
   Serial.begin(9600);
   Serial.println("WiFi connected");
-  Blynk.begin("quj92szKHA-cgfUlC5pwkaoSAqyo-oZt", "ad", "divij@123");
+  Blynk.begin();
 
 dht.begin();
 timer.setInterval(2000L, sendSensor1);
